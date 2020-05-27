@@ -1,0 +1,10 @@
+<%- include('./partials/header') -%>
+
+    <h1>Listado de Generos</h1>
+    <ul>
+        <% for( let i = 0; i < genres.length; i++ ) { %>
+            <a href="/series/by-genre/<%= genres[i].id %> "><li> <%= genres[i].name %> </li></a>
+        <% } %>
+    </ul>
+
+<%- include('./partials/footer') -%>

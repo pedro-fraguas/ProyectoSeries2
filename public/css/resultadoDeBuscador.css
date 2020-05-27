@@ -1,0 +1,186 @@
+*{box-sizing: border-box;}
+
+/* Header */
+
+body{
+  margin-top: 0;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+body main{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+header nav div a{
+  color: #999;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+header nav div a img{
+  width: 58px;
+  padding-left: 0;
+}
+
+nav div div.buscador{
+  position: absolute;
+  right: 0;
+}
+
+nav.uk-navbar-container.uk-margin.uk-navbar{
+  background-color: rgb(129, 133, 138);
+}
+
+nav div div.buscador input{
+  width: 200px;
+}body{
+  margin-top: 0;
+}
+
+body main{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+header nav div a{
+  color: #999;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+header nav div a img{
+  width: 58px;
+  padding-left: 0;
+}
+
+nav div div.buscador{
+  position: absolute;
+  right: 0;
+}
+
+nav div div.buscador input{
+  width: 200px;
+}
+
+button.uk-button-default{
+  border: none;
+}
+/* BODY */
+
+main{
+  font-family: 'Poiret One', cursive;
+}
+
+main section.series div.resultados{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main article.serieBuscada {
+  width: 18%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+main article.serieBuscada img{
+  width: 100%;
+  transition: .3s;
+}
+
+main article.serieBuscada p{
+  opacity: 0;
+  transition: .3s;
+}
+
+main article.serieBuscada img:hover{
+  opacity: 0.5;
+}
+
+main article.serieBuscada:hover p{
+  opacity: 1;
+}
+
+main button{
+  visibility: visible;
+}
+button.uk-button-default{
+  border: none;
+}
+
+button.mostrar-buscador{
+  display: none;
+}
+@media (max-width: 680px){
+
+  main article.serieBuscada {
+    width: 30%;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
+  footer{
+      width: 100%;
+    }
+
+  footer div.footer-izq{
+      width: 40%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  footer div.footer-izq p{
+      margin: 0;
+      width: 50%;
+      height: auto;
+      margin-top: 5%;
+    }
+
+  footer div.footer-der{
+        width: 40%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+  footer div.footer-der p.nombre{
+      visibility: hidden;
+    }
+  footer div.footer-der p.abajo{
+      visibility: hidden;
+    }
+
+  footer div.footer-der p.logo{
+      margin-top: 20%;
+    }
+}
+/* FOOTER */
+
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  padding: 1px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
+    margin-right: 5%;
+}
+
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
+}

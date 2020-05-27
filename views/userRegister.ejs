@@ -1,0 +1,21 @@
+<%- include('./partials/header') -%>
+
+    <h1>Registrate en Series Flash</h1>
+
+    <form action="/users/register" method="POST">
+        <div>
+            <label for="">Username:</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="text" name="email">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="password">
+        </div>
+        <button>Register!</button>
+    </form>
+
+<%- include('./partials/footer') -%>

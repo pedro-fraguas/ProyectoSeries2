@@ -1,0 +1,153 @@
+*{box-sizing: border-box;}
+
+/* Header */
+body{
+  margin-top: 0;
+  background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+a#nav-header{
+  color: white;
+}
+
+body main{
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+header a{
+  color: white;
+}
+
+header nav div a{
+  color: #999;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+header nav div a img{
+  width: 58px;
+  padding-left: 0;
+}
+
+nav div div.buscador{
+  position: absolute;
+  right: 0;
+}
+
+nav.uk-navbar-container.uk-margin.uk-navbar{
+  background-color: rgb(129, 133, 138);
+}
+
+
+nav div div.buscador input{
+  width: 200px;
+}
+
+button.uk-button-default{
+  border: none;
+}
+/* BODY */
+body{
+  margin-left: 0;
+  padding: 0;
+}
+body main{
+  font-family: 'Poiret One', cursive;
+  margin-left: 2%;
+}
+
+form select{
+  margin: 6px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+form label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input{
+  margin: 6px;
+  display: block;
+    margin-bottom: 10px;
+}
+
+button.uk-button-default{
+  border: none;
+}
+
+button.mostrar-buscador{
+  display: none;
+}
+
+@media (max-width: 680px){
+
+  button.mostrar-buscador{
+    display: block;
+  }
+
+  form.buscador{
+    display: none;
+  }
+
+  footer{
+      width: 100%;
+    }
+
+  footer div.footer-izq{
+      width: 40%;
+      margin-left: 0;
+      padding-right: 0;
+    }
+  footer div.footer-izq p{
+      margin: 0;
+      width: 50%;
+      height: auto;
+      margin-top: 5%;
+    }
+
+  footer div.footer-der{
+        width: 40%;
+        margin-right: 0;
+        padding-right: 0;
+    }
+  footer div.footer-der p.nombre{
+      visibility: hidden;
+    }
+  footer div.footer-der p.abajo{
+      visibility: hidden;
+    }
+
+  footer div.footer-der p.logo{
+      margin-top: 20%;
+    }
+}
+/* FOOTER */
+
+footer{
+  font-family: 'Poiret One', cursive;
+  background-color: rgb(129, 133, 138);
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1px;
+  height: 200px;
+}
+
+footer div.footer-izq{
+  width: 40%;
+  margin-left: 5%;
+}
+
+footer div.footer-der{
+    width: 40%;
+    margin-right: 5%;
+}
+
+footer div.footer-izq a{
+  text-decoration: none;
+  color: white;
+}
