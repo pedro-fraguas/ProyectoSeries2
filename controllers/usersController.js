@@ -5,7 +5,7 @@ module.exports = {
     index: function(req, res){
         res.send('Esta es la pagina de USUARIOS')
     },
-    ID: function(req, res){
+    id: function(req, res){
         res.send('Este es el perfil del usuario #' + req.params.ID)
     },
     register: function(req, res){
