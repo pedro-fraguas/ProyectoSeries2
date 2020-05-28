@@ -1,71 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Proyecto Series</title>
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
-        <!-- UIkit JS -->
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="uk-position-relative">
-                <img src="images/light.jpg" alt="">
-                <div class="uk-position-top">
-                    <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
-                        <div class="uk-navbar-left">
-                            <ul class="uk-navbar-nav">
-                                <li>
-                                    <a href="/genres">Generos</a>
-                                    <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
-                                        <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
-                                            <div>
-                                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                    <li><a href="/series/by-genre/1">Action & Adventure</a></li>
-                                                    <li><a href="/series/by-genre/2">Animación</a></li>
-                                                    <li><a href="/series/by-genre/3">Comedia</a></li>
-                                                    <li><a href="/series/by-genre/4">Crimen</a></li>
-                                                    <li class="uk-nav-divider"></li>
-                                                    <li><a href="/series/by-genre/5">Documental</a></li>
-                                                    <li><a href="/series/by-genre/6">Drama</a></li>
-                                                    <li><a href="/series/by-genre/7">Familia</a></li>
-                                                    <li><a href="/series/by-genre/8">Kids</a></li>
-                                                </ul>
-                                            </div>
-                                            <div>
-                                                <ul class="uk-nav uk-navbar-dropdown-nav">
-                                                    <li><a href="/series/by-genre/9">Misterio</a></li>
-                                                    <li><a href="/series/by-genre/10">News</a></li>
-                                                    <li><a href="/series/by-genre/11">Reality</a></li>
-                                                    <li><a href="/series/by-genre/12">Sci-Fi & Fantasy</a></li>
-                                                    <li class="uk-nav-divider"></li>
-                                                    <li><a href="/series/by-genre/14">Soap</a></li>
-                                                    <li><a href="/series/by-genre/15">Talk</a></li>
-                                                    <li><a href="/series/by-genre/16">War & Politics</a></li>
-                                                    <li><a href="/series/by-genre/17">Western</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li><a href="/series">Series</a></li> <!-- class="uk-active" -->
-                                <li><a href="/series/create">Crear Serie</a></li>
-                            </ul>
-                        </div>
-                        <div class="uk-navbar-right">
-                            <form action="/series"  method="GET">
-                                <input type="text" name="query" id="">
-                                <button type="button">Buscar</button>
-                            </form>
-                            <ul class="uk-navbar-nav">
-                                <li><a href="">Login</a></li>
-                                <li><a href="/users/register">Register</a></li>
-                            </ul>
-                        </div>
-                    </nav>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Series-Flash</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/css/uikit.min.css" />
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.2/dist/js/uikit-icons.min.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <nav class="uk-navbar-container uk-margin" uk-navbar>
+        <div class="uk-navbar-left">
+
+          <a class="uk-navbar-item uk-logo" href="home.html"><img src="../img/LogoProyecto.png" alt=""></a>
+
+          <ul class="uk-navbar-nav esconder">
+            <li>
+              <a href="seriesFavoritas.html">
+              <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
+                Favoritos
+              </a>
+            </li>
+            <li>
+              <a href="#">Generos</a>
+              <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2">
+                <div class="uk-navbar-dropdown-grid uk-child-width-1-2" uk-grid>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav listado-generos">
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#"class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li class="uk-nav-divider"></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                    </ul>
+                  </div>
+                  <div>
+                    <ul class="uk-nav uk-navbar-dropdown-nav listado-generos">
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#"class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li class="uk-nav-divider"></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                      <li><a href="#" class="listagenero">Item</a></li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
-        </header>
+              </div>
+            </li>
+          </ul>
+
+          <div class="uk-navbar-item ocultar">
+            <div><a href="BuscadorAvanzado.html">BUSCADOR AVANZADO</a></div>
+          </div>
+          <div class="buscador">
+          <div class="uk-navbar-item">
+            <button class="uk-button uk-button-default mostrar-buscador" type="button" name="boton-despliegue"><i class="fas fa-search"></i></button>
+            <form class="buscador" action="ResultadoDeBuscador.html" method="get">
+              <input class="uk-input uk-form-width-small" name="buscador" type="text" placeholder="Encontra la serie que buscas!">
+              <button class="uk-button uk-button-default"><i class="fas fa-search"></i></button>
+            </form>
+          </div>
+          </div>
+        </div>
+      </nav>
+    </header>
