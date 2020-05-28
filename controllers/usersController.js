@@ -9,7 +9,7 @@ module.exports = {
         res.send('Este es el perfil del usuario #' + req.params.ID)
     },
     register: function(req, res){
-        res.render('userRegister')
+        res.send('Registrar usuario')
     },
     submit: function(req, res){
         if (loginModule.checkUserName(req.params.username)) {
