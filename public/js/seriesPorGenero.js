@@ -1,5 +1,5 @@
 window.onload = function(){
-  var generoID = new URLSearchParams(location.search).get('idGenero');
+  var generoID = new URLSearchParams(location.search).get('id');
   var series;
   var imagenes;
   var hipervinculos;

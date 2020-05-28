@@ -1,6 +1,6 @@
 window.onload = function() {
 
-  var serieID = new URLSearchParams(location.search).get('idSerie');
+  var serieID = new URLSearchParams(location.search).get('id');
 
   //Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
