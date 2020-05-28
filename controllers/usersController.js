@@ -6,10 +6,10 @@ module.exports = {
         res.send('Esta es la pagina de USUARIOS')
     },
     id: function(req, res){
-        res.send('Este es el perfil del usuario #' + req.params.ID)
+        res.send('Este es el perfil del usuario #' + req.params.id)
     },
     register: function(req, res){
-        res.send('Registrar usuario')
+        res.render('registrarUsuario')
     },
     submit: function(req, res){
         if (loginModule.checkUserName(req.params.username)) {
