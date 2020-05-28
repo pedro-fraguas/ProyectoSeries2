@@ -17,7 +17,7 @@ window.onload = function() {
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
+        listado[i].href = "/series/by-genre/" + generos[i].id;
       }
     })
 
@@ -49,7 +49,7 @@ window.onload = function() {
       } else {
         titulos[i].innerHTML += "<div class='titulo-default'><h1>" + series[i].name + "</h1></div>";
       }
-      hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+      hipervinculos[i].href = "series/detail/" + series[i].id;
     }
     for (var i = series.length; i < imagenes.length; i++) {
       imagenes[i].src = "";
@@ -62,7 +62,7 @@ window.onload = function() {
   var verMas = document.querySelector("main button");
   verMas.onclick = function() {
     var resultados = document.querySelector("div.resultados");
-    resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../img/poster-default.png' alt=''></a></article>";
+    resultados.innerHTML += "<article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article><article class='serieBuscada'><p></p><a href=''><img src='../public/img/poster-default.png' alt=''></a></article>";
     contador++;
     cargarMasSeries(series);
 
@@ -88,7 +88,7 @@ window.onload = function() {
           } else {
             titulos[i].innerHTML += "<div class='titulo-default'><h1>" + series[i - (contador - 1) * 20].name + "</h1></div>";
           }
-          hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i - (contador - 1) * 20].id;
+          hipervinculos[i].href = "series/detail/" + series[i - (contador - 1) * 20].id;
         }
         for (var i = (contador - 1) * 20 + series.length; i < imagenes.length; i++) {
           imagenes[i].src = "";

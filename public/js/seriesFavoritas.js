@@ -17,9 +17,9 @@ window.onload = function() {
       })
       .then(function(data) {
         if (data.poster_path != null) {
-          document.querySelector("section.series").innerHTML += "<article class='serie-favorita'><a href='DetalleDeSerie.html?idSerie=" + data.id + "'><img src='https://image.tmdb.org/t/p/original" + data.poster_path + "' alt=''></a></article>"
+          document.querySelector("section.series").innerHTML += "<article class='serie-favorita'><a href='series/detail/" + data.id + "'><img src='https://image.tmdb.org/t/p/original" + data.poster_path + "' alt=''></a></article>"
         } else {
-          document.querySelector("section.series").innerHTML += "<article class='serie-favorita'><a href='DetalleDeSerie.html?idSerie=" + data.id + "'><img src='../img/poster-default.png' alt=''></a></article>"
+          document.querySelector("section.series").innerHTML += "<article class='serie-favorita'><a href='series/detail/" + data.id + "'><img src='../public/img/poster-default.png' alt=''></a></article>"
         }
       })
   }
@@ -35,7 +35,7 @@ window.onload = function() {
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
+        listado[i].href = "series/by-genre/" + generos[i].id;
       }
     })
 

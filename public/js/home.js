@@ -11,7 +11,7 @@ window.onload = function() {
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
+        listado[i].href = "series/by-genre/" + generos[i].id;
       }
     })
 
@@ -33,7 +33,7 @@ window.onload = function() {
         } else {
           titulos[i].innerHTML += "<div class=''><h1>" + series[i].name + "</h1></div>"
         }
-        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+        hipervinculos[i].href = "series/detail/" + series[i].id;
       }
     })
 
@@ -55,7 +55,7 @@ window.onload = function() {
         } else {
           titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
         }
-        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+        hipervinculos[i].href = "series/detail/" + series[i].id;
       }
     })
 
@@ -77,7 +77,7 @@ window.onload = function() {
         } else {
           titulos[i].innerHTML += "<div class='uk-position-center uk-panel'><h1>" + series[i].name + "</h1></div>";
         }
-        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + series[i].id;
+        hipervinculos[i].href = "series/detail/" + series[i].id;
       }
     })
 

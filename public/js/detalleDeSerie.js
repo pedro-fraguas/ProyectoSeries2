@@ -1,6 +1,7 @@
 window.onload = function() {
 
   var serieID = new URLSearchParams(location.search).get('id');
+  // var serieID = req.params.id
 
   //Esto carga los generos al nav bar
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
@@ -13,7 +14,7 @@ window.onload = function() {
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "SeriesPorGenero.html?idGenero=" + generos[i].id;
+        listado[i].href = "series/by.genre/" + generos[i].id;
       }
     })
 
@@ -35,7 +36,7 @@ window.onload = function() {
 
       var generos = document.querySelector(".tituloDatos p.generos");
       for (var i = 0; i < serie.genres.length; i++) {
-        generos.innerHTML += "<a href='SeriesPorGenero.html?idGenero=" + serie.genres[i].id + "'>" + serie.genres[i].name +"</a><br>";
+        generos.innerHTML += "<a href='series/by-genre/" + serie.genres[i].id + "'>" + serie.genres[i].name +"</a><br>";
       }
 
     })
@@ -55,7 +56,7 @@ window.onload = function() {
         if (relacionadas[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + relacionadas[i].poster_path;
         }
-        hipervinculos[i].href = "DetalleDeSerie.html?idSerie=" + relacionadas[i].id;
+        hipervinculos[i].href = "series/detail/" + relacionadas[i].id;
       }
     })
 
