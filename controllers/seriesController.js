@@ -1,5 +1,5 @@
-let db = require('../database/models')
-const op = db.Sequelize.Op
+// let db = require('../database/models')
+// const op = db.Sequelize.Op
 
 module.exports = {
     index: function(req, res){
@@ -16,6 +16,9 @@ module.exports = {
     },
     advancedSearch: function(req, res){
         res.render('buscadorAvanzado')
+    },
+    favorites: function (req, res){
+        res.render('seriesFavoritas')
     },
     // create: function (req, res){
     //     db.Genre.findAll()

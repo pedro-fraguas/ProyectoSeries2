@@ -7,5 +7,6 @@ router.get('/search', controller.search);
 router.get('/advanced-search', controller.advancedSearch);
 router.get('/detail/:id', controller.detail);
 router.get('/by-genre/:id', controller.byGenre);
+router.get('/favorites', controller.favorites);
 
 module.exports = router;
