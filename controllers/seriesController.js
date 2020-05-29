@@ -9,7 +9,8 @@ module.exports = {
         res.render('resultadoDeBuscador')
     },
     detail: function(req, res){
-        res.render('detalleDeSerie')
+        var id = req.params.id
+        res.render('detalleDeSerie', {id: id})
     },
     byGenre: function(req, res){
         res.render('seriesPorGenero')
