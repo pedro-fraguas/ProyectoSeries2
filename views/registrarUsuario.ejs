@@ -1,7 +1,7 @@
 <%- include('./partials/header') -%>
 
-    <script src="../public/js/registrarUsuario.js"></script>
-    <link rel="stylesheet" href="../public/css/registrarUsuario.css">
+    <script src="/js/registrarUsuario.js"></script>
+    <link rel="stylesheet" href="/css/registrarUsuario.css">
 
     <h1>Registrate en Series Flash</h1>
 
@@ -22,17 +22,14 @@
     </form>
 
     <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
+    <button name="myBtn" id="myBtn" class="myBtn">Open Modal</button>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-    </div>
-
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Some text in the Modal..</p>
+        </div>
     </div>
 
 <%- include('./partials/footer') -%>

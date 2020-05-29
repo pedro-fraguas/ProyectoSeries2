@@ -3,7 +3,7 @@
 
 module.exports = {
     index: function(req, res){
-        res.render('prueba')
+        res.send('Esta es la pagina de series')
     },
     search: function(req, res){
         res.render('resultadoDeBuscador')
