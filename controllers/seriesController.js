@@ -1,4 +1,4 @@
-// let db = require('../database/models')
+let db = require('../database/models')
 // const op = db.Sequelize.Op
 
 module.exports = {
@@ -20,6 +20,22 @@ module.exports = {
     },
     favorites: function (req, res){
         res.render('seriesFavoritas')
+    },
+    comment: function(req, res){
+        //primero validar .then
+        db.User.findOne({
+            where: {
+                username: req.body.username
+            }
+        })
+        .then(function(username){
+            db.Review.create({
+                user_id: username.id,
+                serie_id: req.body.id,
+                message: req.body.comment,
+                // rating: '',
+            })
+        })
     },
     // create: function (req, res){
     //     db.Genre.findAll()

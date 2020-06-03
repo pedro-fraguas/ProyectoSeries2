@@ -31,6 +31,7 @@
   </div>
 
   <form action="">
+    <input type="text" id="id" value="<%= id %>">
     <textarea name="comment" id="" cols="20" rows="5"></textarea>
   </form>
 
@@ -41,7 +42,7 @@
   <div id="myModal" class="modal">
       <div class="modal-content">
           <span class="close">&times;</span>
-          <form action="">
+          <form action="" method="POST">
               <label for="username">Username: </label>
               <input type="text" name="username"><br>
               <label for="password">Password: </label>
