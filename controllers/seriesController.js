@@ -1,4 +1,5 @@
 let db = require('../database/models')
+//let loginModule = require('../modulo-login')
 // const op = db.Sequelize.Op
 
 module.exports = {
@@ -10,7 +11,15 @@ module.exports = {
     },
     detail: function(req, res){
         var id = req.params.id
-        res.render('detalleDeSerie', {id: id})
+        db.Review.findAll({
+            where: {
+                serie_id: id
+            }
+        })
+        .then(function(reviews){
+            res.render('detalleDeSerie', {id: id, reviews: reviews})
+        })
+        
     },
     byGenre: function(req, res){
         res.render('seriesPorGenero')
@@ -22,20 +31,26 @@ module.exports = {
         res.render('seriesFavoritas')
     },
     comment: function(req, res){
-        //primero validar .then
         db.User.findOne({
             where: {
-                username: req.body.username
+                username: req.body.username,
+                password: req.body.password,
             }
         })
-        .then(function(username){
-            db.Review.create({
-                user_id: username.id,
-                serie_id: req.body.id,
-                message: req.body.comment,
-                // rating: '',
-            })
+        .then(function(results){
+            if (results != null){
+                db.Review.create({
+                    user_id: results.id,
+                    serie_id: req.body.id,
+                    message: req.body.comment,
+                    // rating: '',
+                })
+                return res.redirect() //completar
+            } else {
+                // incorrect username or password
+            }
         })
+        
     },
     // create: function (req, res){
     //     db.Genre.findAll()
@@ -58,22 +73,22 @@ module.exports = {
     //         })
     // },
     // detail: function(req, res){
-        //  db.Serie.findByPk(req.params.id, {
-        //      include: [{association: 'genre'}]
-        // })
-        //     .then(function(series){
-        //         return res.render('seriesDetail', {series: series})
-        //     })
+    //      db.Serie.findByPk(req.params.id, {
+    //          include: [{association: 'genre'}]
+    //     })
+    //         .then(function(series){
+    //             return res.render('seriesDetail', {series: series})
+    //         })
     // },
     // byGenre: function(req, res){
-        // db.Serie.findAll({ 
-        //     where: {
-        //         genre_id: req.params.genre_id
-        //     }
-        // })
-        //     .then(function(series){
-        //         return res.render('seriesList', {series: series})
-        //     })
+    //     db.Serie.findAll({ 
+    //         where: {
+    //             genre_id: req.params.genre_id
+    //         }
+    //     })
+    //         .then(function(series){
+    //             return res.render('seriesList', {series: series})
+    //         })
     // },
     // edit: function(req, res){
     //     let serieRequest = db.Serie.findByPk(req.params.id)
@@ -105,15 +120,15 @@ module.exports = {
     //     res.redirect('/series')
     // },
     // search: function(req, res){
-        // var data = new URLSearchParams(location.search);
-        // var query = data.get("query");
-        // db.Serie.findAll({
-        //     where: [{
-        //         title: {[op.like]: "%" + query + "%"} //REVISAR
-        //     }]
-        // })
-        // .then(function(series){
-        //     res.render('seriesList', {series: series})
-        // })
+    //     var data = new URLSearchParams(location.search);
+    //     var query = data.get("query");
+    //     db.Serie.findAll({
+    //         where: [{
+    //             title: {[op.like]: "%" + query + "%"} //REVISAR
+    //         }]
+    //     })
+    //     .then(function(series){
+    //         res.render('seriesList', {series: series})
+    //     })
     // }
 }
