@@ -25,4 +25,18 @@ module.exports = {
             res.redirect('/series')
         }
     },
+    log: function(req, res){
+        //let errors = validateResults(req)
+
+        // if (errors.isEmpty()) {
+            //valido, y armo un array errors
+        
+            //req.session.usuarioLoggeado = usuarioALoggearse
+        // } else {
+        //     return res.render('loginUsuario', {errors: errors.errors})
+        // }
+    },
+    login: function(req, res){
+
+    }
 }
