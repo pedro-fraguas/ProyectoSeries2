@@ -1,0 +1,15 @@
+<%- include('./partials/header') -%>
+
+    <h1><%= user.username %> </h1>
+
+    <h3>Reviews</h3>
+    <% for( let i = 0; i < reviews.length; i++ ) { %>
+        <div>
+            <!-- traer serie -->
+            <%= reviews[i].message %> 
+        </div>
+        <!-- Boton Editar -->
+        <button type="button">Editar</button>
+    <% } %>
+
+<%- include('./partials/footer') -%>

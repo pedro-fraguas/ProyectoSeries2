@@ -35,27 +35,17 @@
     <% } %>
   </div>
 
-  <form action="">
+  <form action="/" method="POST">
     <input type="text" id="id" value="<%= id %>">
     <textarea name="comment" id="" cols="20" rows="5"></textarea>
+    <select name="rating" id="">
+      <option value="" disabled selected>Rating</option>
+      <% for( let i = 0; i < 10; i++ ) { %>
+        <option value=i+1><%= i+1 %> </option>
+      <% } %>
+    </select>
+    <button>Submit Review</button>
   </form>
-
-  <!-- Trigger/Open The Modal -->
-  <button name="myBtn" id="myBtn" class="myBtn">Post</button>
-
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-      <div class="modal-content">
-          <span class="close">&times;</span>
-          <form action="" method="POST">
-              <label for="username">Username: </label>
-              <input type="text" name="username"><br>
-              <label for="password">Password: </label>
-              <input type="password" name="password"><br>
-              <button>Submit</button>
-          </form>
-      </div>
-  </div>
 
   <button type="button" class="series-relacionadas" name="series-relacionadas">Ver series relacionadas</button>
   <div class="relacionadas">
