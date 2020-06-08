@@ -10,9 +10,11 @@
     color: white;
   }
 
-  button.uk-button-default{
+  button.uk-button-default{ 
     border: none;
   }
+
+  #id {display: none;}
 
   /* body */
 
