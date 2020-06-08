@@ -63,7 +63,7 @@ label {
 footer{
     font-family: 'Poiret One', cursive;
     background-color: rgb(129, 133, 138);
-    margin-top: 25%;
+    margin-top: 50%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
