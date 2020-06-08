@@ -18,7 +18,6 @@ window.onload = function() {
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "series/by.genre/" + generos[i].id;
       }
     })
 
