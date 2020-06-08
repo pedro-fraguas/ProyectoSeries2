@@ -1,0 +1,11 @@
+<%- include('./partials/header') -%>
+
+    <script src="/js/borrarUsuario.js"></script>
+
+    <p>Esta seguro que desea borrar su usuario?</p>
+
+    <form action="/users/delete/<%= id %>" method="POST">
+        <button type="submit">Delete User</button>
+    </form>
+
+<%- include('./partials/footer') -%>

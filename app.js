@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(session({secret: 'Your secret is safe with me', cookie: {maxAge: 300000}}));
+app.use(session({secret: 'Your secret is safe with me', cookie: {maxAge: 30000000}}));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

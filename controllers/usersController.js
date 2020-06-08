@@ -114,4 +114,19 @@ module.exports = {
             res.redirect('/users/profile')
         })
     },
+    deleteUser: function(req, res){
+        res.render('borrarUsuario', {profile: req.session.userID, id: req.params.id})
+    },
+    delete: function(req, res){
+        db.User.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(response){
+            req.session.userID = undefined
+            req.session.username = undefined
+            res.redirect('/')
+        })
+    }
 }

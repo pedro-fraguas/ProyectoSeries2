@@ -13,5 +13,7 @@ router.post('/logout', controller.logout);
 router.get('/edit-review/:id', controller.editReview);
 router.post('/edit-review/:id', controller.updateReview);
 router.post('/delete-review/:id', controller.deleteReview);
+router.get('/delete/:id', controller.deleteUser);
+router.post('/delete/:id', controller.delete);
 
 module.exports = router;
