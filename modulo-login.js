@@ -8,11 +8,7 @@ let moduloLogin = {
             }
         })
         .then(function(user) {
-            if (Number.isInteger(user.id)){
-                return true
-            } else {
-                return false
-            }
+            return user != null;
         })
     },
     checkUserEmail: function (email) {
@@ -22,11 +18,18 @@ let moduloLogin = {
             }
         })
         .then(function(user) {
-            if (Number.isInteger(user.id)){
-                return true
-            } else {
-                return false
+            return user != null;
+        })
+    },
+
+    findByEmail: function (email){
+        return db.User.findOne({
+            where: {
+                email:email
             }
+        })
+        .then(resultado=> {
+            return resultado
         })
     },
 

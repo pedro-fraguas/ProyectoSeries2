@@ -1,10 +1,5 @@
 let db = require('../database/models')
 
-
-// const fetch = require("node-fetch");
-// let loginModule = require('../modulo-login')
-// const op = db.Sequelize.Op
-
 module.exports = {
 
     index: function(req, res){
@@ -14,7 +9,7 @@ module.exports = {
       res.render('resultadoDeBuscador', {query: req.params.query})
     },
     detail: function(req, res){
-        var id = req.query.id
+        var id = req.params.id
         db.Review.findAll({
             where: {
                 serie_id: id
@@ -23,12 +18,17 @@ module.exports = {
                 {association: "user"}
             ]
         })
-        .then(function(req, res){
-          res.render('detalleDeSerie', {id: id})
+        .then(function(results){
+            console.log(results);
+            
+            res.render('detalleDeSerie', {id: id, reviews: results})
+        })
+        .catch(function(error){
+
         })
     },
     byGenre: function(req, res){
-        res.render('seriesPorGenero')
+        res.render('seriesPorGenero', {id: req.params.id})
     },
     advanced: function(req, res){
         res.render('buscadorAvanzado')

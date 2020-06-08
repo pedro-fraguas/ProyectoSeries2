@@ -1,6 +1,6 @@
 window.onload = function(){
-  var generoID = new URLSearchParams(location.search).get('id');
-  // var generoID = req.params.id
+  var generoID = document.getElementById('id').innerHTML
+  
   var series;
   var imagenes;
   var hipervinculos;
@@ -18,7 +18,6 @@ window.onload = function(){
 
       for (var i = 0; i < listado.length; i++) {
         listado[i].innerHTML = generos[i].name;
-        listado[i].href = "series/by-genre/" + generos[i].id;
       }
     })
 
@@ -56,7 +55,7 @@ window.onload = function(){
       if (series[i].poster_path != null) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
       }
-      hipervinculos[i].href = "series/detail/" + series[i].id;
+      hipervinculos[i].href = "detail/" + series[i].id;
     }
   }
 

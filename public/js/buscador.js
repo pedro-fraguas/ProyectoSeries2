@@ -49,7 +49,7 @@ window.onload = function() {
       } else {
         titulos[i].innerHTML += "<div class='titulo-default'><h1>" + series[i].name + "</h1></div>";
       }
-      hipervinculos[i].href = "series/detail/" + series[i].id;
+      hipervinculos[i].href = "detail/" + series[i].id;
     }
     for (var i = series.length; i < imagenes.length; i++) {
       imagenes[i].src = "";
@@ -88,7 +88,7 @@ window.onload = function() {
           } else {
             titulos[i].innerHTML += "<div class='titulo-default'><h1>" + series[i - (contador - 1) * 20].name + "</h1></div>";
           }
-          hipervinculos[i].href = "series/detail/" + series[i - (contador - 1) * 20].id;
+          hipervinculos[i].href = "detail/" + series[i - (contador - 1) * 20].id;
         }
         for (var i = (contador - 1) * 20 + series.length; i < imagenes.length; i++) {
           imagenes[i].src = "";
