@@ -1,23 +1,23 @@
 <%- include('./partials/header') -%>
 
-<link rel="stylesheet" href="../public/css/buscadorAvanzado.css">
-<script src="../public/js/buscadorAvanzado.js" charset="utf-8"></script>
+<link rel="stylesheet" href="/css/buscadorAvanzado.css">
+<script src="/js/buscadorAvanzado.js" charset="utf-8"></script>
 <script src="https://kit.fontawesome.com/4cbe2a5007.js" crossorigin="anonymous"></script>
 <link href="https://fonts.googleapis.com/css?family=Poiret+One&display=swap" rel="stylesheet">
 
 <main>
   <h1>Buscador avanzado</h1>
-  <form class="buscador-avanzado" action="/series/advanced-search" method="POST">
+  <form class="buscador-avanzado" action="/series/advanced-search" method="GET">
     <label for="">¿Qué género estás buscando?</label>
     <select class="generos" name="generoincluido">
       <option value="" disabled selected>Generos...</option>
-    </select>
+    </select><br>
     <label for="">¿Qué género queres excluir?</label>
     <select class="generos2" name="generoexcluido">
       <option value="" disabled selected>Generos...</option>
-    </select>
+    </select><br>
     <label for="">¿Qué año de estreno buscas?</label>
-    <input type="text" name="añoestreno" value="" placeholder="Año de estreno" class="ano">
+    <input type="text" name="añoestreno" value="" placeholder="Año de estreno" class="ano"><br>
     <label for="">¿Cómo queres ver los resulltados?</label>
     <select name="ordenresultados">
       <option value="" disabled selected>Orden de resultados</option>
@@ -27,7 +27,7 @@
       <option value="first_air_date.asc">Mas viejo</option>
       <option value="popularity.desc">Por mayor popularidad</option>
       <option value="popularity.asc">Por menor popularidad</option>
-    </select>
+    </select><br>
     <button type="submit" name="button" >Buscar!</button>
   </form>
 </main>
