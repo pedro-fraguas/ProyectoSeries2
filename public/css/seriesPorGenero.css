@@ -41,6 +41,10 @@ button.uk-button-default{
 
 /* BODY */
 
+#id{
+  display: none;
+}
+
 main{
   font-family: 'Poiret One', cursive;
 }
