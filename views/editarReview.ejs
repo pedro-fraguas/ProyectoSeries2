@@ -3,9 +3,21 @@
 <link rel="stylesheet" href="/css/editarReview.css">
 
 <form action="/users/edit-review/<%= review.id %> " method="POST">
-    <input type="text" name="serie_id" value="<%= review.serie_id %>"><br>
+    <input type="text" name="serie_id" value="<%= review.serie_id %>" id="id"><br>
     <textarea name="comment" id="" cols="30" rows="10"><%= review.message %></textarea><br>
-    <input type="text" name="rating" value="<%= review.rating %>"><br>
+    <select name="rating">
+        <% for( let i = 0; i < 10; i++ ) { %>
+            <% if (i + 1 == review.rating ) { %>
+                <option value=<%= i + 1 %> selected>
+                    <%= i + 1 %> 
+                </option>
+            <% } else { %>
+                <option value=<%= i + 1 %>>
+                    <%= i + 1 %>
+                </option>
+            <% } %>
+        <% } %>
+    </select> <br>
     <button>Save</button>
 </form>
 
