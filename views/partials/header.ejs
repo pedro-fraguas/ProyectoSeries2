@@ -65,14 +65,13 @@
             <div><a href="/series/advanced">BUSCADOR AVANZADO</a></div>
           </div>
 
-          <!-- revisar -->
-          <% if (1 < 0) { %>
-            <div><a href="/users/logout">LOG OUT</a></div>
-          <% } else { %>
-            <div><a href="/users/login">LOGIN</a></div>
-          <% } %>
+          <div class="uk-navbar-item ocultar"><a href="/users/login">LOGIN  </a></div>
 
-          <div><a href="/users/register">REGISTER</a></div>
+          <div class="uk-navbar-item ocultar"><a href="/users/register">REGISTER</a></div>
+
+          <% if (profile != undefined) { %>
+            <div class="uk-navbar-item ocultar"><a href="/users/profile">PERFIL</a></div>
+          <% } %>
           
           <div class="buscador">
             <div class="uk-navbar-item">

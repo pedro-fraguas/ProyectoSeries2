@@ -1,0 +1,10 @@
+<%- include('./partials/header') -%>
+
+<form action="/edit-review/<%= review.id %> " method="POST">
+    <input type="text" name="serie_id" value="<%= review.serie_id %>"><br>
+    <textarea name="comment" id="" cols="30" rows="10"><%= review.message %></textarea><br>
+    <input type="text" name="rating" value="<%= review.rating %>"><br>
+    <button>Save</button>
+</form>
+
+<%- include('./partials/footer') -%>

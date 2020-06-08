@@ -1,15 +1,20 @@
 <%- include('./partials/header') -%>
 
+    <script src="/js/perfilUsuario"></script>
+    <link rel="stylesheet" href="/css/perfilUsuario">
+
     <h1><%= user.username %> </h1>
 
     <h3>Reviews</h3>
-    <% for( let i = 0; i < reviews.length; i++ ) { %>
+    <% for( let i = 0; i < user.review.length; i++ ) { %>
         <div>
-            <!-- traer serie -->
-            <%= reviews[i].message %> 
+            <%= user.review[i].id %>
+            <%= user.review[i].serie_id %> <br>
+            <%= user.review[i].message %> 
+            <%= user.review[i].rating %>
         </div>
-        <!-- Boton Editar -->
-        <button type="button">Editar</button>
+        
+        <a href="/users/edit-review/<%= user.review[i].id %>" ><button>Edit</button></a>
     <% } %>
 
 <%- include('./partials/footer') -%>

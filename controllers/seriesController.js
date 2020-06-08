@@ -6,7 +6,7 @@ module.exports = {
         res.send('Esta es la pagina de series')
     },
     search: function(req, res){
-      res.render('resultadoDeBuscador', {query: req.params.query})
+      res.render('resultadoDeBuscador', {query: req.params.query, profile: req.session.userID})
     },
     detail: function(req, res){
         var id = req.params.id
@@ -15,29 +15,29 @@ module.exports = {
                 serie_id: id
             },
             include: [
-                {association: "user"}
+                {association: "user", attributes: ["username"]}
             ]
         })
         .then(function(results){
             console.log(results);
             
-            res.render('detalleDeSerie', {id: id, reviews: results})
+            res.render('detalleDeSerie', {id: id, reviews: results, profile: req.session.userID})
         })
         .catch(function(error){
 
         })
     },
     byGenre: function(req, res){
-        res.render('seriesPorGenero', {id: req.params.id})
+        res.render('seriesPorGenero', {id: req.params.id, profile: req.session.userID})
     },
     advanced: function(req, res){
-        res.render('buscadorAvanzado')
+        res.render('buscadorAvanzado', {profile: req.session.userID})
     },
     advancedSearch: function(req, res){
-        res.render('resultadosBuscadorAvanzado')
+        res.render('resultadosBuscadorAvanzado', {profile: req.session.userID})
     },
     favorites: function (req, res){
-        // res.render('seriesFavoritas')
+        res.render('seriesFavoritas', {profile: req.session.userID})
     },
     comment: function(req, res){
         db.Review.create({
