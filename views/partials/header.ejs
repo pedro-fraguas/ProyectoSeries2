@@ -21,6 +21,9 @@
 
           <ul class="uk-navbar-nav esconder">
             <li>
+              <a href="/"><img src="/img/LogoProyecto.png" width="50px" class="mv-ft-logo"></a>
+            </li>
+            <li>
               <a href="/series/favorites">
               <span class="uk-icon uk-margin-small-right" uk-icon="icon: star"></span>
                 Favoritos
@@ -65,7 +68,11 @@
             <div><a href="/series/advanced">BUSCADOR AVANZADO</a></div>
           </div>
 
-          <div class="uk-navbar-item ocultar"><a href="/users/login">LOGIN  </a></div>
+          <% if (profile == undefined) { %>
+            <div class="uk-navbar-item ocultar"><a href="/users/login">LOGIN</a></div>
+          <% } else { %>
+            <div class="uk-navbar-item ocultar"><a href="/users/logout">LOGOUT</a></div>
+          <% } %>
 
           <div class="uk-navbar-item ocultar"><a href="/users/register">REGISTER</a></div>
 

@@ -46,5 +46,8 @@ module.exports = {
             message: req.body.comment,
             rating: req.body.rating,
         }) 
+        .then(function(response){
+            res.redirect('/series/detail/' + req.params.id)
+        })
     },
 }

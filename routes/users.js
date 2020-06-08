@@ -8,7 +8,8 @@ router.get('/register', controller.register);
 router.post('/register', controller.submit);
 router.get('/login', controller.log);
 router.post('/login', controller.login);
-router.get('/logout', controller.logout);
+router.get('/logout', controller.out);
+router.post('/logout', controller.logout);
 router.get('/edit-review/:id', controller.editReview);
 router.post('/edit-review/:id', controller.updateReview);
 

@@ -35,13 +35,13 @@
     <% } %>
   </div>
 
-  <form action="/" method="POST">
+  <form action="/series/detail/<%= id %> " method="POST">
     <input type="text" id="id" value="<%= id %>">
-    <textarea name="comment" id="" cols="20" rows="5"></textarea>
+    <textarea name="comment" id="" cols="30" rows="5" placeholder="Escribi tu reseña..."></textarea>
     <select name="rating" id="">
       <option value="" disabled selected>Rating</option>
       <% for( let i = 0; i < 10; i++ ) { %>
-        <option value=i+1><%= i+1 %> </option>
+        <option value=<%= i + 1 %>><%= i + 1 %> </option>
       <% } %>
     </select>
     <button>Submit Review</button>

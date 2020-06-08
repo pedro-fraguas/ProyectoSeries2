@@ -55,18 +55,30 @@ module.exports = {
         res.render('loginUsuario', {error: "", profile: req.session.userID})
     },
     login: function(req, res){
-        loginModule.validate(req.body.username, req.body.password)
-        .then(function(validate){
+        let validate = loginModule.validate(req.body.username, req.body.password)
+        let user = db.User.findOne({
+            where: {
+                username: req.body.username
+            }
+        })
+
+        Promise.all([validate, user])
+        .then(function([validate, user]){
             if (validate){
-                req.session.username = req.body.username
+                req.session.username = user.username
+                req.session.userID = user.id
                 res.redirect('/')
             } else {
                 res.render('loginUsuario', {error: "El usuario o la contraseña son incorrectos", profile: req.session.userID})
             }
         })
     },
+    out: function(req, res){
+        res.render('logoutUsuario', {profile: req.session.userID})
+    },
     logout: function(req,res){
-        req.session.userID = ""
+        req.session.userID = undefined
+        req.session.username = undefined
         res.redirect('/users/login')
     },
     editReview: function(req, res){
