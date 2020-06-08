@@ -7,10 +7,10 @@
     <h3>Reviews</h3>
     <% for( let i = 0; i < user.review.length; i++ ) { %>
         <div>
-            <%= user.review[i].id %>
-            <%= user.review[i].serie_id %> <br>
-            <%= user.review[i].message %> 
-            <%= user.review[i].rating %>
+            <p id="id"><%= user.review[i].id %></p>
+            <p><%= user.review[i].serie_id %></p>
+            <p><%= user.review[i].message %></p> 
+            <p>(<%= user.review[i].rating %>)</p>
         </div>
         
         <a href="/users/edit-review/<%= user.review[i].id %>" ><button>Edit</button></a>
