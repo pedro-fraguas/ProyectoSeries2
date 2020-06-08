@@ -34,7 +34,7 @@ window.onload = function(){
           document.querySelector("h3.genero").innerHTML = listado[i].name;
           break;
         }
-      }
+      } 
     })
 
   //Esto carga los posters a los resultados
@@ -55,7 +55,7 @@ window.onload = function(){
       if (series[i].poster_path != null) {
         imagenes[i].src = "https://image.tmdb.org/t/p/original" + series[i].poster_path;
       }
-      hipervinculos[i].href = "detail/" + series[i].id;
+      hipervinculos[i].href = "/series/detail/" + series[i].id;
     }
   }
 
