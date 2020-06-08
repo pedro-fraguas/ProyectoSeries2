@@ -103,5 +103,15 @@ module.exports = {
         .then(function(response){
             res.redirect('/users/profile')
         })
-    }
+    },
+    deleteReview: function(req, res){
+        db.Review.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(function(response){
+            res.redirect('/users/profile')
+        })
+    },
 }

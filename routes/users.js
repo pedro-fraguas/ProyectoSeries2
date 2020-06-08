@@ -12,5 +12,6 @@ router.get('/logout', controller.out);
 router.post('/logout', controller.logout);
 router.get('/edit-review/:id', controller.editReview);
 router.post('/edit-review/:id', controller.updateReview);
+router.post('/delete-review/:id', controller.deleteReview);
 
 module.exports = router;

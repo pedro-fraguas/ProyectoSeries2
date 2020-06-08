@@ -73,11 +73,11 @@
           <% } else { %>
             <div class="uk-navbar-item ocultar"><a href="/users/logout">LOGOUT</a></div>
           <% } %>
-
-          <div class="uk-navbar-item ocultar"><a href="/users/register">REGISTER</a></div>
-
+          
           <% if (profile != undefined) { %>
             <div class="uk-navbar-item ocultar"><a href="/users/profile">PERFIL</a></div>
+          <% } else { %>
+            <div class="uk-navbar-item ocultar"><a href="/users/register">REGISTER</a></div>
           <% } %>
           
           <div class="buscador">

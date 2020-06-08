@@ -15,6 +15,9 @@
         </div>
         
         <a href="/users/edit-review/<%= user.review[i].id %>" ><button>Edit</button></a>
+        <form action="/users/delete-review/<%= user.review[i].id %>" method="POST">
+            <button type="submit">Delete</button>
+        </form>
     <% } %>
 
 <%- include('./partials/footer') -%>
