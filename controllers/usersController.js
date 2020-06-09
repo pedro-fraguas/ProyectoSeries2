@@ -47,9 +47,9 @@ module.exports = {
                     email: req.body.email,
                     password: encryptedPassword,
                 })
-                req.session.username = req.body.username
-                req.session.userID = "not undefined"
-                res.redirect('/')
+                req.session.username = undefined
+                req.session.userID = undefined
+                res.redirect('/users/login')
             }
         })
         
