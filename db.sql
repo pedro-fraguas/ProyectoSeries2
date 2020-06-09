@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 08, 2020 at 02:56 PM
+-- Generation Time: Jun 09, 2020 at 12:31 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.4.2
 
@@ -30,13 +30,6 @@ CREATE TABLE `reviews` (
   `serie_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `reviews`
---
-
-INSERT INTO `reviews` (`id`, `user_id`, `message`, `rating`, `serie_id`) VALUES
-(1, 1, 'Excelente serie, recomendada', 10, 1668);
-
 -- --------------------------------------------------------
 
 --
@@ -49,14 +42,6 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `users`
---
-
-INSERT INTO `users` (`id`, `username`, `email`, `password`) VALUES
-(1, 'Prueba', 'prueba@flash.com', '1234'),
-(2, 'prueba2', 'prueba2@flash.com', '4321');
 
 --
 -- Indexes for dumped tables
@@ -83,13 +68,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
