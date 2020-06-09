@@ -6,7 +6,7 @@ module.exports = {
         res.send('Esta es la pagina de series')
     },
     search: function(req, res){
-      res.render('resultadoDeBuscador', {query: req.params.query, profile: req.session.userID})
+        res.render('resultadoDeBuscador', {query: req.params.query, profile: req.session.userID})
     },
     detail: function(req, res){
         var id = req.params.id

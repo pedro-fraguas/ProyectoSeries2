@@ -1,5 +1,10 @@
 let loginModule = require('../modulo-login')
 let db = require('../database/models')
+let bcrypt = require('bcryptjs')
+//stackoverflow code
+let salt = bcrypt.genSaltSync(10)
+let hash = bcrypt.hashSync("elultimo10", salt)
+
 
 module.exports = {
     index: function(req, res){
@@ -24,15 +29,13 @@ module.exports = {
     },
     submit: function(req, res){
 
+        var encryptedPassword = bcrypt.hashSync(req.body.password)
         var checkUsername = loginModule.checkUserName(req.body.username)
         var checkEmail = loginModule.checkUserEmail(req.body.email)
-        
 
         Promise.all([checkUsername, checkEmail])
         .then(function([checkUsername, checkEmail]){
-
-            console.log(checkUsername);
-            console.log(checkEmail);
+            
             
             if (checkUsername[0]) {
                 res.render('registrarUsuario', {error: "El nombre de usuario ya existe", profile: req.session.userID})
@@ -42,9 +45,10 @@ module.exports = {
                 db.User.create({
                     username: req.body.username,
                     email: req.body.email,
-                    password: req.body.password,
+                    password: encryptedPassword,
                 })
                 req.session.username = req.body.username
+                req.session.userID = "not undefined"
                 res.redirect('/')
             }
         })
@@ -55,7 +59,9 @@ module.exports = {
         res.render('loginUsuario', {error: "", profile: req.session.userID})
     },
     login: function(req, res){
+
         let validate = loginModule.validate(req.body.username, req.body.password)
+        
         let user = db.User.findOne({
             where: {
                 username: req.body.username
