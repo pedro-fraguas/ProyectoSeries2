@@ -59,7 +59,7 @@ window.onload = function() {
         if (relacionadas[i].poster_path != null) {
           imagenes[i].src = "https://image.tmdb.org/t/p/original" + relacionadas[i].poster_path;
         }
-        hipervinculos[i].href = "series/detail/" + relacionadas[i].id;
+        hipervinculos[i].href = "/series/detail/" + relacionadas[i].id;
       }
     })
 

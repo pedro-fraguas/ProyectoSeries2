@@ -1,24 +1,25 @@
 <%- include('./partials/header') -%>
 
     <link rel="stylesheet" href="/css/perfilUsuario.css">
+    <script src="/js/header.js"></script>
 
     <h1><%= user.username %> </h1>
 
-    <h3>Reviews</h3>
+    <h3>Mis reviews:</h3>
     <% for( let i = 0; i < user.review.length; i++ ) { %>
-        <div>
+        <div class="review">
             <div>
                 <p id="id"><%= user.review[i].id %></p>
-                <p><%= user.review[i].serie_id %></p>
+                <p>ID de la serie: <%= user.review[i].serie_id %></p>
                 <p><%= user.review[i].message %></p> 
-                <p>(<%= user.review[i].rating %>)</p>
+                <p>Puntaje: <%= user.review[i].rating %></p>
             </div>
             
             <a href="/users/edit-review/<%= user.review[i].id %>" ><button>Edit</button></a>
             <form action="/users/delete-review/<%= user.review[i].id %>" method="POST">
                 <button type="submit">Delete</button>
-            </form>
-        </div> <br>
+            </form><br><br>
+        </div> <br><br>
     <% } %>
 
     <a href="/users/delete/<%= user.id %>"><button>Delete User</button></a>

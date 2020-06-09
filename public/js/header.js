@@ -1,6 +1,4 @@
-window.onload = function(){
-    alert('Para borrar su usuario de manera exitosa es necesario borrar todas sus reviews')
-
+window.onload(function(){
     //Esto carga los generos al nav bar
     fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=935b83cf932d87a1deec2a0108c3513e&language=en-US")
     .then(function(response) {
@@ -15,4 +13,4 @@ window.onload = function(){
         listado[i].href = "/series/by-genre/" + generos[i].id;
         }
     })
-}
+})

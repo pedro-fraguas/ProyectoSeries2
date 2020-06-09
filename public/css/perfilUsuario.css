@@ -52,14 +52,22 @@ h3{
   margin-left: 5%;
 }
 
-div{
-  margin-left: 5%;
-}
-
 button{
   float: left;
   margin-left: 2%;
 }
+
+div.review{
+  background-color: lightgray;
+  margin-left: 3%;
+  padding-left: 10px;
+  width: 30%;
+  border-style: solid;
+  border-radius: 4%;
+  border-color: gray;
+  border-width: 0.15vw;
+}
+
 /* FOOTER */
 
 footer{

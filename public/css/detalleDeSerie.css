@@ -18,6 +18,16 @@
 
   /* body */
 
+  div.review{
+    padding: 10px;
+    margin: 10px;
+    width: 30%;
+    border-style: solid;
+    border-radius: 4%;
+    border-color: gray;
+    border-width: 0.15vw;
+  }
+
   body {
     background-image: url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg");
     background-repeat: repeat;
